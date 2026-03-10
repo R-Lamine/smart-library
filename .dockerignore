@@ -1,0 +1,5 @@
+mysql-data/
+ollama/
+src/vendor/
+src/node_modules/
+.git
