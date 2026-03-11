@@ -25,3 +25,5 @@ Route::prefix('admin')->name('admin.')->group(function () {
 // Routes pour les adhérents (partie publique)
 Route::get('/catalog', [BookController::class, 'catalog'])->name('catalog.index');
 Route::get('/catalog/search', [AiController::class, 'naturalSearch'])->name('catalog.search');
+
+Route::resource('books', BookController::class);

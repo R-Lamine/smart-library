@@ -22,4 +22,20 @@ class AiController extends Controller
 
         return response()->json($result);
     }
+
+    // Analyse de stock (pour le dashboard)
+    public function stockAnalysis()
+    {
+        return view('admin.ai.stock-analysis');
+    }
+
+    // Recherche naturelle (pour les adhérents)
+    public function naturalSearch(Request $request)
+    {
+        $query = $request->input('query', '');
+        
+        // Pour l'instant, retourne une vue vide
+        // On la remplira après
+        return view('catalog.search', ['query' => $query]);
+    }
 }
